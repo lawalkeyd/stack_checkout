@@ -8,7 +8,6 @@
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -43,10 +42,11 @@
             <div class="section_div">
                 <p class="section_no">1</p>
                 <p class="section_title">Account</p>
+                <a href="" class="edit_address" id="edit_details">EDIT DETAILS</a>
             </div>
 
             <!--Section form-->
-            <div class="section_form">
+            <div class="section_form" id="account_form">
                 <div class="row">
                     <div class="col section_input">
                         <label for="email" class="form_label">Email Address</label>
@@ -58,7 +58,7 @@
                     </div>
                 </div>
                 <div class="save_div d-flex justify-content-end">
-                    <button class="save_btn btn">Save and Continue <img src="images/save_ic.svg" alt=""></button>
+                    <button class="save_btn btn" id="save_btn_1">Save and Continue <img src="images/save_ic.svg" alt=""></button>
                 </div>
             </div>
 
@@ -66,8 +66,67 @@
             <div class="section_div">
                 <p class="section_no">2</p>
                 <p class="section_title">Shipping</p>
-                <a href="" class="edit_address">EDIT ADDRESS</a>
+                <a href="" class="edit_address" id="edit_address">EDIT ADDRESS</a>
             </div>
+
+            <!--Section form-->
+            <div class="section_form" id="shipping_form">
+
+                <div class="row">
+                    <div class="col section_input">
+                        <label for="first_name" class="form_label name_label">First Name</label>
+                        <input type="text" name="first_name" id="" class="form_input">
+                    </div>
+                    <div class="col section_input">
+                        <label for="last_name" class="form_label name_label">Last Name</label>
+                        <input type="text" name="last_name" id="" class="form_input">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col section_input">
+                        <label for="country" class="form_label w-100">Country</label>
+                        <select name="country" id="" class="form_select">
+                            <option>Nigeria</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                            <option>Option 4</option>
+                            <option>Option 5</option>
+                        </select>
+                    </div>
+                    <div class="col section_input">
+                        <label for="state" class="form_label w-100">State</label>
+                        <select name="state" id="" class="form_select">
+                            <option>Lagos</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                            <option>Option 4</option>
+                            <option>Option 5</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col section_input">
+                        <label for="adress_line_1" class="form_label w-100">Address Line 1</label>
+                        <input type="text" name="adress_line_1" id="" class="form_input w-100">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col section_input">
+                        <label for="adress_line_2" class="form_label w-100">Address Line 2</label>
+                        <input type="text" name="adress_line_2" id="" class="form_input w-100">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col section_input">
+                        <label for="zip_code" class="form_label w-100">Zip code</label>
+                        <input type="text" name="zip_code" id="" class="form_input w-100">
+                    </div>
+                </div>
+            </div>            
 
         </div>
 
@@ -75,7 +134,7 @@
         <div class="col-sm-5 order_col">
             <div class="row order_row">
                 <p class="col order_title">Order Summary</p>
-                <a href="" class="col edit_cart d-flex justify-content-end">EDIT CART</a>
+                <a href="" class="col edit_cart d-flex justify-content-end" id="edit_cart">EDIT CART</a>
             </div>
 
             <div class="item_no">
@@ -156,8 +215,46 @@
 
         </div>
 
+        <div class="payment_div d-flex justify-content-center">
+            <a href="" class="payment_button" data-bs-toggle="modal" data-bs-target="#payment_modal">Continue to Payment</a>
+        </div>
     </div>
 
 </div>
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="payment_modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Payment Modal</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn modal_close" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn modal_success"><img src="images/success.png" alt=""></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function(){
+        document.querySelector("#shipping_form").style.display = 'none'
+        document.querySelector("#edit_details").style.display = 'none'
+            document.querySelector("#save_btn_1").onclick = function(){
+                document.querySelector("#account_form").style.display = 'none'
+                document.querySelector("#shipping_form").style.display = 'block'
+                document.querySelector("#edit_address").style.display = 'none'
+                document.querySelector("#edit_details").style.display = 'block'
+            } 
+        })
+</script>
+    
 </body>
 </html>
