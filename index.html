@@ -48,13 +48,26 @@
             <!--Section form-->
             <div class="section_form" id="account_form">
                 <div class="row">
-                    <div class="col section_input">
-                        <label for="email" class="form_label">Email Address</label>
-                        <input type="email" name="email" id="" class="form_input">
+                    <div class="col-sm-6 shared_div">
+                        <label for="id_first_name" class="form-label">Email Address</label>
+                        <input type="text" class="form-control shadow-none" id="id_email" aria-describedby="emailHelp"
+                               placeholder="Enter your Email ADdress" name="email_address">
+                        <div id="firstNameHelp" class="form-text error-text"></div>
                     </div>
-                    <div class="col section_input">
-                        <label for="phone" class="form_label">Phone Number</label>
-                        <input type="number" name="phone" id="" class="form_input">
+                    <div class="col-sm-6 shared_div">
+                        <label for="id_phone_number" class="form-label">Phone Number</label>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-text border-0" id="basic-addon2">
+                                    <img src="images/flag.png" alt="send-icon" class="flag-icon">
+                                    <span class="country-code bg-transparent">+234</span>
+                                </span>
+                                <input type="number" class="form-control shadow-none border-0" id="id_phone_number"
+                                       aria-describedby="firstNameHelp" style="padding-left: 2px"
+                                       placeholder="" name="phone_number">
+                            </div>
+                            <div id="firstNameHelp" class="form-text error-text"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="save_div d-flex justify-content-end">
@@ -68,62 +81,55 @@
                 <p class="section_title">Shipping</p>
                 <a href="" class="edit_address" id="edit_address">EDIT ADDRESS</a>
             </div>
-
             <!--Section form-->
             <div class="section_form" id="shipping_form">
-
-                <div class="row">
-                    <div class="col section_input">
-                        <label for="first_name" class="form_label name_label">First Name</label>
-                        <input type="text" name="first_name" id="" class="form_input">
+                <div class="form-section form-section-one row mb-3">
+                    <div class="col-sm-6 shared_div">
+                        <label for="id_first_name" class="form-label">First Name</label>
+                        <input type="text" class="form-control shadow-none" id="id_first_name" aria-describedby="firstNameHelp"
+                               placeholder="Enter your First Name" name="first_name">
+                        <div id="firstNameHelp" class="form-text error-text"></div>
                     </div>
-                    <div class="col section_input">
-                        <label for="last_name" class="form_label name_label">Last Name</label>
-                        <input type="text" name="last_name" id="" class="form_input">
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col section_input">
-                        <label for="country" class="form_label w-100">Country</label>
-                        <select name="country" id="" class="form_select">
-                            <option>Nigeria</option>
-                            <option>Option 2</option>
-                            <option>Option 3</option>
-                            <option>Option 4</option>
-                            <option>Option 5</option>
-                        </select>
-                    </div>
-                    <div class="col section_input">
-                        <label for="state" class="form_label w-100">State</label>
-                        <select name="state" id="" class="form_select">
-                            <option>Lagos</option>
-                            <option>Option 2</option>
-                            <option>Option 3</option>
-                            <option>Option 4</option>
-                            <option>Option 5</option>
-                        </select>
+                    <div class="col-sm-6 shared_div">
+                        <label for="id_last_name" class="form-label">Last Name</label>
+                        <input type="text" class="form-control shadow-none" id="id_last_name" aria-describedby="lastNameHelp"
+                               placeholder="Enter your Last Name" name="last_name">
+                        <div id="lastNameHelp" class="form-text error-text"></div>
                     </div>
                 </div>
-
-                <div class="row">
-                    <div class="col section_input">
-                        <label for="adress_line_1" class="form_label w-100">Address Line 1</label>
-                        <input type="text" name="adress_line_1" id="" class="form_input w-100">
+        
+                <div class="form-section form-section-two d-block">
+                    <div class="row mb-3 pb-2">
+                        <div class="col-sm-6 shared_div">
+                            <label for="id_country" class="form-label">Country</label>
+                            <select id="id_country" class="form-control shadow-none form-select" name="country">
+                                <option selected class="placeholder-text">Select a Country</option>
+                                <option>Nigeria</option>
+                            </select>
+                            <div id="firstNameHelp" class="form-text error-text"></div>
+                        </div>
+                        <div class="col-sm-6 shared_div">
+                            <label for="id_state" class="form-label">State</label>
+                            <select id="id_state" class="form-control shadow-none form-select" name="state">
+                                <option selected class="placeholder-text">Select a State</option>
+                                <option>Abuja</option>
+                            </select>
+                            <div id="firstNameHelp" class="form-text error-text"></div>
+                        </div>
                     </div>
-                </div>
-
-                <div class="row">
-                    <div class="col section_input">
-                        <label for="adress_line_2" class="form_label w-100">Address Line 2</label>
-                        <input type="text" name="adress_line_2" id="" class="form_input w-100">
+        
+                    <div class="mb-3 pb-2">
+                        <label for="id_address_line_1" class="form-label">Address Line 1</label>
+                        <input type="text" class="form-control shadow-none" id="id_address_line_1"
+                               aria-describedby="lastNameHelp" placeholder="Address Line 1" name="address_line_1">
+                        <div id="lastNameHelp" class="form-text error-text"></div>
                     </div>
-                </div>
-
-                <div class="row">
-                    <div class="col section_input">
-                        <label for="zip_code" class="form_label w-100">Zip code</label>
-                        <input type="text" name="zip_code" id="" class="form_input w-100">
+        
+                    <div class="mb-3 pb-2">
+                        <label for="id_address_line_2" class="form-label">Address Line 2</label>
+                        <input type="text" class="form-control shadow-none" id="id_address_line_2"
+                               aria-describedby="lastNameHelp" placeholder="Address Line 2" name="address_line_2">
+                        <div id="lastNameHelp" class="form-text error-text"></div>
                     </div>
                 </div>
             </div>            
@@ -131,7 +137,12 @@
         </div>
 
         <!--Second Column-->
-        <div class="col-sm-5 order_col">
+        <div class="col-sm-1">
+
+        </div>
+
+        <!--Third Column-->
+        <div class="col-sm-4 order_col">
             <div class="row order_row">
                 <p class="col order_title">Order Summary</p>
                 <a href="" class="col edit_cart d-flex justify-content-end" id="edit_cart">EDIT CART</a>
@@ -149,11 +160,11 @@
                     <div class="col-2 d-none d-sm-table-cell">
                     <img src="images/image 2.png" class="order_img" alt="">
                     </div>
-                    <div class="col-6 descr">
+                    <div class="col-7 descr">
                         <span class="descr_title">2 x  Rechargeable Wireless Speakers...</span> <br>
                         <span class="descr_color">Color: Black</span>
                     </div>
-                    <div class="col-4 price d-flex justify-content-center">
+                    <div class="col-3 price d-flex justify-content-center p-0">
                         <span class="">15, 000 NGN</span>
                     </div>
                 </div>
@@ -163,11 +174,11 @@
                     <div class="col-2 d-none d-sm-table-cell">
                     <img src="images/image 5.png" class="order_img" alt="">
                     </div>
-                    <div class="col-6 descr">
+                    <div class="col-7 descr">
                         <span class="descr_title">10 x  Portable bluetooth outdoor...</span> <br>
                         <span class="descr_color">Color: Red</span>
                     </div>
-                    <div class="col-4 price d-flex justify-content-center">
+                    <div class="col-3 p-0 price d-flex justify-content-center">
                         <span class="">150, 000 NGN</span>
                     </div>
                 </div>  
@@ -177,11 +188,11 @@
                     <div class="col-2 d-none d-sm-table-cell">
                     <img src="images/image 3.png" class="order_img" alt="">
                     </div>
-                    <div class="col-6 descr">
+                    <div class="col-7 descr">
                         <span class="descr_title">3 x  Bedroom Nightlight Wireless Bluetoo...</span> <br>
                         <span class="descr_color">Color: Black</span>
                     </div>
-                    <div class="col-4 price d-flex justify-content-center">
+                    <div class="col-3 p-0 price d-flex justify-content-center">
                         <span class="">15, 000 NGN</span>
                     </div>
 
