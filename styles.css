@@ -190,12 +190,12 @@ body
 
 .total_cost
 {
-    width: 433px;
-    height: 313px;
     background: #F6F6F6;
     border-radius: 4px;
     margin-top: 45px;
     margin-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .tc_row
@@ -274,13 +274,6 @@ body
 /*--mobile--*/
 @media (max-width: 978px)
 {
-    .total_cost
-    {
-        width: 333px;
-        margin-left: 0px;
-        margin-bottom: 150px;
-    }
-
     .section_input
     {
         font-size: 16px;
@@ -342,6 +335,13 @@ body
     .shared_div
     {
         margin-bottom: 12px;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+    .edit_address
+    {
+        margin-left: 120px;
     }
 }
 
